@@ -64,4 +64,19 @@ export default class TodoItem extends React.Component {
       this._stopEdit();
     }
   }
+
+  _stopEdit() {
+    if (this.state.editText) {
+      this.props.update(this.props.item.id, this.state.editText);
+      this.setState({
+        editing: false
+      });
+    } else {
+      this.props.destroy(this.props.item.id);
+    }
+  }
+
+  _removeItem() {
+    this.props.destroy(this.props.item.id);
+  }
 }
