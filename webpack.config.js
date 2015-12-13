@@ -23,15 +23,17 @@ module.exports = {
   ],
 
   module: {
-    loader: [{
-      test: /\.js$/,
-      loaders: ['babel'],
-      exclude: /node_modules/,
+    loaders: [{
+      test: /\.js?$/,
+      loader: 'babel',
       include: __dirname
     }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader'
-    }]
+    }],
+    resolve: {
+      extensions: ['', '.js']
+    }
   }
 
 };

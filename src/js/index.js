@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-class Index extends React.Component {
+class App extends React.Component {
   render() {
     return(
       <div>
@@ -12,6 +12,6 @@ class Index extends React.Component {
 }
 
 render(
-  <Index />,
-  document.getElementById('root');
+  <App />,
+  document.getElementById('root')
 );
