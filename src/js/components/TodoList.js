@@ -1,6 +1,6 @@
-import { Parse } from 'parse';
-import ParseReact from 'parse-react';
-import React from 'react';
+var Parse = require('parse').Parse;
+var ParseReact = require('parse-react');
+var React = require('react');
 var ParseComponent = ParseReact.Component(React);
 
 import TodoItem from './TodoItem';
@@ -44,6 +44,6 @@ export default class TodoList extends ParseComponent {
   }
 
   _destroyItem(id) {
-    ParseReact.Mutation.destroy(id).dispatch();
+    ParseReact.Mutation.Destroy(id).dispatch();
   }
 }
